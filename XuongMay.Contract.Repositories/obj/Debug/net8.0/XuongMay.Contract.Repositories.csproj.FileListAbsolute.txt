@@ -1,0 +1,15 @@
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Contract.Repositories\bin\Debug\net8.0\XuongMay.Contract.Repositories.deps.json
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Contract.Repositories\bin\Debug\net8.0\XuongMay.Contract.Repositories.dll
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Contract.Repositories\bin\Debug\net8.0\XuongMay.Contract.Repositories.pdb
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Contract.Repositories\bin\Debug\net8.0\XuongMay.Core.dll
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Contract.Repositories\bin\Debug\net8.0\XuongMay.Core.pdb
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Contract.Repositories\obj\Debug\net8.0\XuongMay.Contract.Repositories.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Contract.Repositories\obj\Debug\net8.0\XuongMay.Contract.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Contract.Repositories\obj\Debug\net8.0\XuongMay.Contract.Repositories.AssemblyInfoInputs.cache
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Contract.Repositories\obj\Debug\net8.0\XuongMay.Contract.Repositories.AssemblyInfo.cs
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Contract.Repositories\obj\Debug\net8.0\XuongMay.Contract.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Contract.Repositories\obj\Debug\net8.0\XuongMay.C09380F4.Up2Date
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Contract.Repositories\obj\Debug\net8.0\XuongMay.Contract.Repositories.dll
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Contract.Repositories\obj\Debug\net8.0\refint\XuongMay.Contract.Repositories.dll
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Contract.Repositories\obj\Debug\net8.0\XuongMay.Contract.Repositories.pdb
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Contract.Repositories\obj\Debug\net8.0\ref\XuongMay.Contract.Repositories.dll

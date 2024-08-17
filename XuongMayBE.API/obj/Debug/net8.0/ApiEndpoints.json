@@ -1,0 +1,49 @@
+[
+  {
+    "ContainingType": "XuongMayBE.API.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/auth/auth_account",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "XuongMay.ModelViews.AuthModelViews.LoginModelView",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMayBE.API.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/auth/new_account",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XuongMayBE.API.Controllers.UsersController",
+    "Method": "Login",
+    "RelativePath": "api/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "index",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

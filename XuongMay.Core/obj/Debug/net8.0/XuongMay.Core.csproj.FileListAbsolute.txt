@@ -1,0 +1,11 @@
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Core\bin\Debug\net8.0\XuongMay.Core.deps.json
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Core\bin\Debug\net8.0\XuongMay.Core.dll
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Core\bin\Debug\net8.0\XuongMay.Core.pdb
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Core\obj\Debug\net8.0\XuongMay.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Core\obj\Debug\net8.0\XuongMay.Core.AssemblyInfoInputs.cache
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Core\obj\Debug\net8.0\XuongMay.Core.AssemblyInfo.cs
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Core\obj\Debug\net8.0\XuongMay.Core.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Core\obj\Debug\net8.0\XuongMay.Core.dll
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Core\obj\Debug\net8.0\refint\XuongMay.Core.dll
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Core\obj\Debug\net8.0\XuongMay.Core.pdb
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.Core\obj\Debug\net8.0\ref\XuongMay.Core.dll

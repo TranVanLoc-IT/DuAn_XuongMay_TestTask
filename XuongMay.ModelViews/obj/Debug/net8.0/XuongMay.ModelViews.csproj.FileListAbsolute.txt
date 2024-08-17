@@ -1,0 +1,11 @@
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.ModelViews\bin\Debug\net8.0\XuongMay.ModelViews.deps.json
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.ModelViews\bin\Debug\net8.0\XuongMay.ModelViews.dll
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.ModelViews\bin\Debug\net8.0\XuongMay.ModelViews.pdb
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.ModelViews\obj\Debug\net8.0\XuongMay.ModelViews.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.ModelViews\obj\Debug\net8.0\XuongMay.ModelViews.AssemblyInfoInputs.cache
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.ModelViews\obj\Debug\net8.0\XuongMay.ModelViews.AssemblyInfo.cs
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.ModelViews\obj\Debug\net8.0\XuongMay.ModelViews.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.ModelViews\obj\Debug\net8.0\XuongMay.ModelViews.dll
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.ModelViews\obj\Debug\net8.0\refint\XuongMay.ModelViews.dll
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.ModelViews\obj\Debug\net8.0\XuongMay.ModelViews.pdb
+C:\Users\admin\Documents\Zalo Received Files\demo\XuongMay.ModelViews\obj\Debug\net8.0\ref\XuongMay.ModelViews.dll
