@@ -1,0 +1,6 @@
+@XuongMayNhom8.API_HostAddress = http://localhost:5257
+
+GET {{XuongMayNhom8.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
