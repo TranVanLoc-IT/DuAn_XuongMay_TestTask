@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "XuongMayNhom8.Services/1.0.0": {
+        "runtime": {
+          "XuongMayNhom8.Services.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "XuongMayNhom8.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

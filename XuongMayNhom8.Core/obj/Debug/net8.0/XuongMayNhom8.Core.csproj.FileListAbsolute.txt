@@ -1,0 +1,12 @@
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Core\bin\Debug\net8.0\XuongMayNhom8.Core.deps.json
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Core\bin\Debug\net8.0\XuongMayNhom8.Core.dll
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Core\bin\Debug\net8.0\XuongMayNhom8.Core.pdb
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Core\obj\Debug\net8.0\XuongMayNhom8.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Core\obj\Debug\net8.0\XuongMayNhom8.Core.AssemblyInfoInputs.cache
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Core\obj\Debug\net8.0\XuongMayNhom8.Core.AssemblyInfo.cs
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Core\obj\Debug\net8.0\XuongMayNhom8.Core.csproj.CoreCompileInputs.cache
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Core\obj\Debug\net8.0\XuongMayNhom8.Core.sourcelink.json
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Core\obj\Debug\net8.0\XuongMayNhom8.Core.dll
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Core\obj\Debug\net8.0\refint\XuongMayNhom8.Core.dll
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Core\obj\Debug\net8.0\XuongMayNhom8.Core.pdb
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Core\obj\Debug\net8.0\ref\XuongMayNhom8.Core.dll

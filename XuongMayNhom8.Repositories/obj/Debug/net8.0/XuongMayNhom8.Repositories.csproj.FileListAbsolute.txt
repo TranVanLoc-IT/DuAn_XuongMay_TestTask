@@ -1,0 +1,15 @@
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Repositories\bin\Debug\net8.0\XuongMayNhom8.Repositories.deps.json
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Repositories\bin\Debug\net8.0\XuongMayNhom8.Repositories.runtimeconfig.json
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Repositories\bin\Debug\net8.0\XuongMayNhom8.Repositories.dll
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Repositories\bin\Debug\net8.0\XuongMayNhom8.Repositories.pdb
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Repositories\obj\Debug\net8.0\XuongMayNhom8.Repositories.csproj.AssemblyReference.cache
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Repositories\obj\Debug\net8.0\XuongMayNhom8.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Repositories\obj\Debug\net8.0\XuongMayNhom8.Repositories.AssemblyInfoInputs.cache
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Repositories\obj\Debug\net8.0\XuongMayNhom8.Repositories.AssemblyInfo.cs
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Repositories\obj\Debug\net8.0\XuongMayNhom8.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Repositories\obj\Debug\net8.0\XuongMayNhom8.Repositories.sourcelink.json
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Repositories\obj\Debug\net8.0\XuongMayNhom8.Repositories.dll
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Repositories\obj\Debug\net8.0\refint\XuongMayNhom8.Repositories.dll
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Repositories\obj\Debug\net8.0\XuongMayNhom8.Repositories.pdb
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Repositories\obj\Debug\net8.0\XuongMayNhom8.Repositories.genruntimeconfig.cache
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Repositories\obj\Debug\net8.0\ref\XuongMayNhom8.Repositories.dll
