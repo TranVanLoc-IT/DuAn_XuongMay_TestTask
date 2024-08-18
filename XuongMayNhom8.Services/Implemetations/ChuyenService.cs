@@ -13,6 +13,11 @@ namespace XuongMayNhom8.Services.Implemetations
 			return await _chuyenRepository.GetAll();
 		}
 
+		public async Task<PagedResult<Chuyen>> GetAll(int pageNumber, int pageSize)
+		{
+			return await _chuyenRepository.GetAll(pageNumber, pageSize);
+		}
+
 		public async Task<Chuyen> GetById(int maChuyen)
 		{
 			try
@@ -29,7 +34,6 @@ namespace XuongMayNhom8.Services.Implemetations
 			}
 		}
 
-
 		public async Task Add(Chuyen chuyen)
 		{
 			await _chuyenRepository.Add(chuyen);
@@ -42,8 +46,19 @@ namespace XuongMayNhom8.Services.Implemetations
 
 		public async Task Delete(int maChuyen)
 		{
-			_ = await _chuyenRepository.GetById(maChuyen) ?? throw new KeyNotFoundException("Chuyen not found");
-			await _chuyenRepository.Delete(maChuyen);
+			try
+			{
+				_ = await _chuyenRepository.GetById(maChuyen) ?? throw new KeyNotFoundException("Chuyen not found");
+				await _chuyenRepository.Delete(maChuyen);
+			}
+			catch (KeyNotFoundException)
+			{
+				throw;
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("An error occurred while deleting the Chuyen", ex);
+			}
 		}
 	}
 }

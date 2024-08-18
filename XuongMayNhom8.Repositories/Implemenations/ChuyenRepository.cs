@@ -33,9 +33,22 @@ namespace XuongMayNhom8.Repositories.Implemenations
 			return await _context.Chuyens.AsNoTracking().ToListAsync();
 		}
 
-		public async Task<Chuyen> GetById(int maChuyen)
+		public async Task<PagedResult<Chuyen>> GetAll(int pageNumber, int pageSize)
 		{
-			return await _context.Chuyens.FindAsync(maChuyen) ?? throw new KeyNotFoundException("Chuyen not found");
+			var chuyens = await _context.Chuyens.AsNoTracking().Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
+			var totalRecords = await _context.Chuyens.CountAsync();
+			return new PagedResult<Chuyen>
+			{
+				TotalCount = totalRecords,
+				PageSize = pageSize,
+				PageNumber = pageNumber,
+				Items = chuyens
+			};
+		}
+
+		public async Task<Chuyen?> GetById(int maChuyen)
+		{
+			return await _context.Chuyens.FindAsync(maChuyen);
 		}
 
 		public async Task Update(Chuyen chuyen)

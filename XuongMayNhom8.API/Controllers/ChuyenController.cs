@@ -7,20 +7,35 @@ namespace XuongMayNhom8.API.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
-	public class ChuyenController : ControllerBase
+	public class ChuyenController(IChuyenService service) : ControllerBase
 	{
-		private readonly IChuyenService _service;
-
-		public ChuyenController(IChuyenService service)
-		{
-			_service = service;
-		}
+		private readonly IChuyenService _service = service;
 
 		[HttpGet]
 		public async Task<IActionResult> GetAll()
 		{
-			var chuyens = await _service.GetAll();
-			return Ok(chuyens);
+			try
+			{
+				var chuyens = await _service.GetAll();
+				return Ok(chuyens);
+			} catch (Exception)
+			{
+				return StatusCode(StatusCodes.Status500InternalServerError, new { Message = "An error occurred while processing your request." });
+			}
+		}
+
+		[HttpGet("page/{pageNumber}/{pageSize}")]
+		public async Task<IActionResult> GetAll(int pageNumber, int pageSize)
+		{
+			try
+			{
+				var chuyens = await _service.GetAll(pageNumber, pageSize);
+				return Ok(chuyens);
+			}
+			catch (Exception)
+			{
+				return StatusCode(StatusCodes.Status500InternalServerError, new { Message = "An error occurred while processing your request." });
+			}
 		}
 
 		[HttpGet("{id}")]
@@ -35,7 +50,7 @@ namespace XuongMayNhom8.API.Controllers
 			{
 				return NotFound(new { Message = $"Chuyen with ID {id} not found." });
 			}
-			catch (Exception)
+			catch
 			{
 				return StatusCode(StatusCodes.Status500InternalServerError, new { Message = "An error occurred while processing your request." });
 			}
@@ -44,8 +59,23 @@ namespace XuongMayNhom8.API.Controllers
 		[HttpPost]
 		public async Task<IActionResult> Add(Chuyen chuyen)
 		{
-			await _service.Add(chuyen);
-			return CreatedAtAction(nameof(GetById), new { id = chuyen.Machuyen }, chuyen);
+			try
+			{
+				if (chuyen == null)
+				{
+					return BadRequest(new { Message = "Invalid input data." });
+				}
+
+				await _service.Add(chuyen);
+				return CreatedAtAction(nameof(GetById), new { id = chuyen.Machuyen }, chuyen);
+			}
+			catch (DbUpdateException ex)
+			{
+				return StatusCode(StatusCodes.Status400BadRequest, new { Message = "Database update failed.", Details = ex.Message });
+			} catch (Exception ex)
+			{
+				return StatusCode(StatusCodes.Status500InternalServerError, new { Message = "An error occurred while processing your request.", Details = ex.Message });
+			}
 		}
 
 		[HttpPut("{id}")]
@@ -53,18 +83,44 @@ namespace XuongMayNhom8.API.Controllers
 		{
 			if (id != chuyen.Machuyen)
 			{
-				return BadRequest();
+				return BadRequest(new { Message = "ID in URL does not match ID in request body." });
 			}
 
-			await _service.Update(chuyen);
-			return NoContent();
+			try
+			{
+				await _service.Update(chuyen);
+				return NoContent();
+			}
+			catch (KeyNotFoundException)
+			{
+				return NotFound(new { Message = $"Chuyen with ID {id} not found." });
+			}
+			catch (DbUpdateException ex)
+			{
+				return StatusCode(StatusCodes.Status400BadRequest, new { Message = "Database update failed.", Details = ex.Message });
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(StatusCodes.Status500InternalServerError, new { Message = "An error occurred while processing your request.", Details = ex.Message });
+			}
 		}
 
 		[HttpDelete("{id}")]
 		public async Task<IActionResult> Delete(int id)
 		{
-			await _service.Delete(id);
-			return NoContent();
+			try
+			{
+				await _service.Delete(id);
+				return NoContent();
+			}
+			catch (KeyNotFoundException)
+			{
+				return NotFound(new { Message = $"Chuyen with ID {id} not found." });
+			}
+			catch (Exception)
+			{
+				return StatusCode(StatusCodes.Status500InternalServerError, new { Message = "An error occurred while processing your request." });
+			}
 		}
 	}
 }
