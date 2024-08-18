@@ -10,7 +10,8 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "8.0.8",
           "Swashbuckle.AspNetCore": "6.4.0",
-          "XuongMayNhom8.Repositories": "1.0.0"
+          "XuongMayNhom8.Repositories": "1.0.0",
+          "XuongMayNhom8.Services": "1.0.0"
         },
         "runtime": {
           "XuongMayNhom8.API.dll": {}
@@ -913,6 +914,14 @@
         "runtime": {
           "XuongMayNhom8.Repositories.dll": {}
         }
+      },
+      "XuongMayNhom8.Services/1.0.0": {
+        "dependencies": {
+          "XuongMayNhom8.Repositories": "1.0.0"
+        },
+        "runtime": {
+          "XuongMayNhom8.Services.dll": {}
+        }
       }
     }
   },
@@ -1490,6 +1499,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "XuongMayNhom8.Repositories/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "XuongMayNhom8.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

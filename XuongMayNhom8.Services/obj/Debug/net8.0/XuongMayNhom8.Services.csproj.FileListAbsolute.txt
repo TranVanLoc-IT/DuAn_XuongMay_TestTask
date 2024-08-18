@@ -10,3 +10,7 @@ C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMa
 C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Services\obj\Debug\net8.0\refint\XuongMayNhom8.Services.dll
 C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Services\obj\Debug\net8.0\XuongMayNhom8.Services.pdb
 C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Services\obj\Debug\net8.0\ref\XuongMayNhom8.Services.dll
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Services\bin\Debug\net8.0\XuongMayNhom8.Repositories.dll
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Services\bin\Debug\net8.0\XuongMayNhom8.Repositories.pdb
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Services\obj\Debug\net8.0\XuongMayNhom8.Services.csproj.AssemblyReference.cache
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.Services\obj\Debug\net8.0\XuongMay.8BF7D37B.Up2Date

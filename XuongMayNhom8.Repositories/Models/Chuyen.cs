@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace XuongMayNhom8.Repositories.Models;
+﻿namespace XuongMayNhom8.Repositories.Models;
 
 public partial class Chuyen
 {
@@ -13,5 +10,5 @@ public partial class Chuyen
 
     public string? Vitri { get; set; }
 
-    public virtual ICollection<Congviec> Congviecs { get; set; } = new List<Congviec>();
+    public virtual ICollection<Congviec>? Congviecs { get; set; } = [];
 }

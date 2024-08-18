@@ -206,7 +206,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Desktop\\Desktop\\TestIntern\\TranVanLoc-IT\\DuAn_XuongMay_TestTask\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj": {
+                "projectPath": "C:\\Users\\Desktop\\Desktop\\TestIntern\\TranVanLoc-IT\\DuAn_XuongMay_TestTask\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

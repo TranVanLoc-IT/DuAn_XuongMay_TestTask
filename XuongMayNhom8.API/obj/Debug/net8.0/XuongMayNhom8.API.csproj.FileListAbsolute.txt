@@ -138,3 +138,5 @@ C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMa
 C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.API\bin\Debug\net8.0\XuongMayNhom8.Repositories.dll
 C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.API\bin\Debug\net8.0\XuongMayNhom8.Repositories.pdb
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.API\bin\Debug\net8.0\XuongMayNhom8.Services.dll
+C:\Users\Desktop\Desktop\TestIntern\TranVanLoc-IT\DuAn_XuongMay_TestTask\XuongMayNhom8.API\bin\Debug\net8.0\XuongMayNhom8.Services.pdb

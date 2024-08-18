@@ -1595,6 +1595,9 @@
       "XuongMayNhom8.Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "XuongMayNhom8.Repositories": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/XuongMayNhom8.Services.dll": {}
         },
