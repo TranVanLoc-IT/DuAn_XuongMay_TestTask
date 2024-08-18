@@ -1,0 +1,6 @@
+@AmazingProjectNhat_HostAddress = http://localhost:5134
+
+GET {{AmazingProjectNhat_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
