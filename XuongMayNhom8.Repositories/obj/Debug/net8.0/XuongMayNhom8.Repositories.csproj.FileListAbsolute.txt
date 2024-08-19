@@ -1,0 +1,14 @@
+D:\workspace\vs\other\XuongMayNhom8\XuongMayNhom8\XuongMayNhom8.Repositories\bin\Debug\net8.0\XuongMayNhom8.Repositories.deps.json
+D:\workspace\vs\other\XuongMayNhom8\XuongMayNhom8\XuongMayNhom8.Repositories\bin\Debug\net8.0\XuongMayNhom8.Repositories.runtimeconfig.json
+D:\workspace\vs\other\XuongMayNhom8\XuongMayNhom8\XuongMayNhom8.Repositories\bin\Debug\net8.0\XuongMayNhom8.Repositories.dll
+D:\workspace\vs\other\XuongMayNhom8\XuongMayNhom8\XuongMayNhom8.Repositories\bin\Debug\net8.0\XuongMayNhom8.Repositories.pdb
+D:\workspace\vs\other\XuongMayNhom8\XuongMayNhom8\XuongMayNhom8.Repositories\obj\Debug\net8.0\XuongMayNhom8.Repositories.csproj.AssemblyReference.cache
+D:\workspace\vs\other\XuongMayNhom8\XuongMayNhom8\XuongMayNhom8.Repositories\obj\Debug\net8.0\XuongMayNhom8.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\vs\other\XuongMayNhom8\XuongMayNhom8\XuongMayNhom8.Repositories\obj\Debug\net8.0\XuongMayNhom8.Repositories.AssemblyInfoInputs.cache
+D:\workspace\vs\other\XuongMayNhom8\XuongMayNhom8\XuongMayNhom8.Repositories\obj\Debug\net8.0\XuongMayNhom8.Repositories.AssemblyInfo.cs
+D:\workspace\vs\other\XuongMayNhom8\XuongMayNhom8\XuongMayNhom8.Repositories\obj\Debug\net8.0\XuongMayNhom8.Repositories.csproj.CoreCompileInputs.cache
+D:\workspace\vs\other\XuongMayNhom8\XuongMayNhom8\XuongMayNhom8.Repositories\obj\Debug\net8.0\XuongMayNhom8.Repositories.dll
+D:\workspace\vs\other\XuongMayNhom8\XuongMayNhom8\XuongMayNhom8.Repositories\obj\Debug\net8.0\refint\XuongMayNhom8.Repositories.dll
+D:\workspace\vs\other\XuongMayNhom8\XuongMayNhom8\XuongMayNhom8.Repositories\obj\Debug\net8.0\XuongMayNhom8.Repositories.pdb
+D:\workspace\vs\other\XuongMayNhom8\XuongMayNhom8\XuongMayNhom8.Repositories\obj\Debug\net8.0\XuongMayNhom8.Repositories.genruntimeconfig.cache
+D:\workspace\vs\other\XuongMayNhom8\XuongMayNhom8\XuongMayNhom8.Repositories\obj\Debug\net8.0\ref\XuongMayNhom8.Repositories.dll
