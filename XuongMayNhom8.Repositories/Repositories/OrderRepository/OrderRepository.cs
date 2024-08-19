@@ -67,6 +67,14 @@ namespace XuongMayNhom8.Repositories.Repositories.OrderRepository
             }
             return null;
         }
-
+        public async Task<bool> CheckProductQuantityInvalidAsync(int? masp, int? quantity)
+        {
+            int existingQuantity = this._dbContext.Sanphams.Where(sp=>sp.Masp == masp).Select(sp=>sp.SoLuongCon).FirstOrDefault()??0;
+            if (quantity > existingQuantity)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }
