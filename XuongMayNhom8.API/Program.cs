@@ -2,6 +2,9 @@ using Microsoft.EntityFrameworkCore;
 using XuongMayNhom8.Repositories.Models;
 using XuongMayNhom8.Repositories.Repositories.UserRepository;
 using XuongMayNhom8.Services.Services.UserService;
+using XuongMayNhom8.Services.Services.OrderService;
+using XuongMayNhom8.Repositories.Repositories.OrderRepository;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +22,10 @@ builder.Services.AddDbContext<XmbeContext>(options =>
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+
+//regis DI
+builder.Services.AddTransient<IOrderRepository, OrderRepository>();
+builder.Services.AddTransient<IOrderService, OrderService>();
 
 var app = builder.Build();
 

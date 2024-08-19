@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\workspace\\vs\\other\\XuongMayNhom8\\XuongMayNhom8\\XuongMayNhom8.Core\\XuongMayNhom8.Core.csproj",
+      "projectUniqueName": "L:\\source\\repos\\XMBE\\XuongMayNhom8.Core\\XuongMayNhom8.Core.csproj",
       "projectName": "XuongMayNhom8.Core",
-      "projectPath": "D:\\workspace\\vs\\other\\XuongMayNhom8\\XuongMayNhom8\\XuongMayNhom8.Core\\XuongMayNhom8.Core.csproj",
-      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "D:\\workspace\\vs\\other\\XuongMayNhom8\\XuongMayNhom8\\XuongMayNhom8.Core\\obj\\",
+      "projectPath": "L:\\source\\repos\\XMBE\\XuongMayNhom8.Core\\XuongMayNhom8.Core.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "L:\\source\\repos\\XMBE\\XuongMayNhom8.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
