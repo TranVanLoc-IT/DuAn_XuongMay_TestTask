@@ -6,9 +6,9 @@ namespace XuongMayNhom8.Services.Interfaces
 	{
 		Task<IEnumerable<Chuyen>> GetAll();
 		Task<PagedResult<Chuyen>> GetAll(int pageNumber, int pageSize);
-		Task<Chuyen> GetById(int maChuyen);
+		Task<Chuyen> GetById(int chuyenId);
 		Task Add(Chuyen chuyen);
+		Task Delete(int chuyenId);
 		Task Update(Chuyen chuyen);
-		Task Delete(int maChuyen);
 	}
 }

@@ -2,29 +2,32 @@
 using XuongMayNhom8.Repositories.Models;
 using XuongMayNhom8.Services.Interfaces;
 
+// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
 namespace XuongMayNhom8.API.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
-	public class ChuyenController(IChuyenService service) : ControllerBase
+	public class TaskController(ITaskService taskService) : ControllerBase
 	{
-		private readonly IChuyenService _chuyenService = service;
+		private readonly ITaskService _taskService = taskService;
 
-		// GET: api/<ChuyenController>
+		// GET: api/<TaskController>
 		[HttpGet]
 		public async Task<IActionResult> GetAll()
 		{
 			try
 			{
-				var chuyens = await _chuyenService.GetAll();
-				return Ok(chuyens);
-			} catch (Exception)
+				var tasks = await _taskService.GetAll();
+				return Ok(tasks);
+			}
+			catch (Exception)
 			{
 				return StatusCode(StatusCodes.Status500InternalServerError, new { Message = "An error occurred while processing your request." });
 			}
 		}
 
-		// GET api/<ChuyenController>/{pageNumber}/{pageSize}
+		// GET api/<TaskController>/{pageNumber}/{pageSize}
 		[HttpGet("page/{pageNumber}/{pageSize}")]
 		public async Task<IActionResult> GetAll(int pageNumber, int pageSize)
 		{
@@ -34,8 +37,8 @@ namespace XuongMayNhom8.API.Controllers
 			}
 			try
 			{
-				PagedResult<Chuyen> chuyens = await _chuyenService.GetAll(pageNumber, pageSize);
-				return Ok(chuyens);
+				PagedResult<Congviec> tasks = await _taskService.GetAll(pageNumber, pageSize);
+				return Ok(tasks);
 			}
 			catch (Exception)
 			{
@@ -43,18 +46,18 @@ namespace XuongMayNhom8.API.Controllers
 			}
 		}
 
-		// GET api/<ChuyenController>/{id}
+		// GET api/<TaskController>/{id}
 		[HttpGet("{id}")]
 		public async Task<IActionResult> GetById(int id)
 		{
 			try
 			{
-				var chuyen = await _chuyenService.GetById(id);
-				return Ok(chuyen);
+				Congviec task = await _taskService.GetById(id);
+				return Ok(task);
 			}
 			catch (KeyNotFoundException)
 			{
-				return NotFound(new { Message = $"Chuyen with ID {id} not found." });
+				return NotFound(new { Message = $"Task with ID {id} not found." });
 			}
 			catch
 			{
@@ -62,19 +65,31 @@ namespace XuongMayNhom8.API.Controllers
 			}
 		}
 
-		// POST api/<ChuyenController>
+		// POST api/<TaskController>
 		[HttpPost]
-		public async Task<IActionResult> Add(Chuyen chuyen)
+		public async Task<IActionResult> Add(Congviec task)
 		{
 			try
 			{
-				if (chuyen is null)
+				if (task is null)
 				{
 					return BadRequest(new { Message = "Invalid input data." });
 				}
+				
+				if(task.Machuyen.HasValue && !await _taskService.IsChuyenExists(task.Machuyen.Value))
+				{
+					return BadRequest(new { Message = $"Can't create task because chuyen with ID {task.Machuyen} not found." });
+				}
 
-				await _chuyenService.Add(chuyen);
-				return CreatedAtAction(nameof(GetById), new { id = chuyen.Machuyen }, chuyen);
+				// add check if order not exists
+				if(false)
+				{
+					return BadRequest(new {Message = $"Can't create task because order with ID {task.Madh} not found." });
+				}
+
+
+				await _taskService.Add(task);
+				return CreatedAtAction(nameof(GetById), new { id = task.Machuyen }, task);
 			}
 			catch (Exception ex)
 			{
@@ -82,18 +97,18 @@ namespace XuongMayNhom8.API.Controllers
 			}
 		}
 
-		// DELETE api/<ChuyenController>/{id}
+		// DELETE api/<TaskController>/{id}
 		[HttpDelete("{id}")]
 		public async Task<IActionResult> Delete(int id)
 		{
 			try
 			{
-				await _chuyenService.Delete(id);
+				await _taskService.Delete(id);
 				return NoContent();
 			}
 			catch (KeyNotFoundException)
 			{
-				return NotFound(new { Message = $"Task with ID {id} not found." });
+				return NotFound(new { Message = $"Chuyen with ID {id} not found." });
 			}
 			catch (Exception)
 			{
@@ -101,28 +116,39 @@ namespace XuongMayNhom8.API.Controllers
 			}
 		}
 
-		// PUT api/<ChuyenController>/5
+		// PUT api/<TaskController>/{id}
 		[HttpPut("{id}")]
-		public async Task<IActionResult> Update(int id, Chuyen chuyen)
+		public async Task<IActionResult> Update(int id, Congviec task)
 		{
-			if (chuyen is null)
+			if (task is null)
 			{
 				return BadRequest(new { Message = "Invalid input data." });
 			}
 
-			if (id != chuyen.Machuyen)
+			if (id != task.Macv)
 			{
 				return BadRequest(new { Message = "ID in URL does not match ID in request body." });
 			}
 
+			if (task.Machuyen.HasValue && !await _taskService.IsChuyenExists(task.Machuyen.Value))
+			{
+				return BadRequest(new { Message = $"Can't update task because chuyen with ID {task.Machuyen} not found." });
+			}
+
+			// add check if order not exists
+			if (false)
+			{
+				return BadRequest(new { Message = $"Can't update task because order with ID {task.Madh} not found." });
+			}
+
 			try
 			{
-				await _chuyenService.Update(chuyen);
+				await _taskService.Update(task);
 				return NoContent();
 			}
 			catch (KeyNotFoundException)
 			{
-				return NotFound(new { Message = $"Chuyen with ID {id} not found." });
+				return NotFound(new { Message = $"Task with ID {id} not found." });
 			}
 			catch (Exception ex)
 			{

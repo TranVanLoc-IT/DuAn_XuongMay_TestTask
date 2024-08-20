@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace XuongMayNhom8.Repositories.Models;
+﻿namespace XuongMayNhom8.Repositories.Models;
 
 public partial class Danhmuc
 {
@@ -9,5 +6,5 @@ public partial class Danhmuc
 
     public string Tendm { get; set; } = null!;
 
-    public virtual ICollection<Sanpham> Sanphams { get; set; } = new List<Sanpham>();
+    public virtual ICollection<Sanpham> Sanphams { get; set; } = [];
 }

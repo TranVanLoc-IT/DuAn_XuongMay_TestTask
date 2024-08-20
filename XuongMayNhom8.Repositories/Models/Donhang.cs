@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace XuongMayNhom8.Repositories.Models;
+﻿namespace XuongMayNhom8.Repositories.Models;
 
 public partial class Donhang
 {
@@ -13,7 +10,7 @@ public partial class Donhang
 
     public int? Masp { get; set; }
 
-    public virtual ICollection<Congviec> Congviecs { get; set; } = new List<Congviec>();
+    public virtual ICollection<Congviec> Congviecs { get; set; } = [];
 
     public virtual Sanpham? MaspNavigation { get; set; }
 }

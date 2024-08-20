@@ -8,48 +8,37 @@ namespace XuongMayNhom8.Services.Implemetations
 	{
 		private readonly IChuyenRepository _chuyenRepository = repository;
 
+		// Retrieves all Chuyen from the repository
 		public async Task<IEnumerable<Chuyen>> GetAll()
 		{
 			return await _chuyenRepository.GetAll();
 		}
 
+		// Retrieves all Chuyen from the repository with pagination
 		public async Task<PagedResult<Chuyen>> GetAll(int pageNumber, int pageSize)
 		{
 			return await _chuyenRepository.GetAll(pageNumber, pageSize);
 		}
 
-		public async Task<Chuyen> GetById(int maChuyen)
+		// Retrieves a single Chuyen by its ID
+		public async Task<Chuyen> GetById(int chuyenId)
 		{
-			try
-			{
-				return await _chuyenRepository.GetById(maChuyen) ?? throw new KeyNotFoundException("Chuyen not found");
-			}
-			catch (KeyNotFoundException)
-			{
-				throw;
-			}
-			catch (Exception ex)
-			{
-				throw new Exception("An error occurred while retrieving the Chuyen", ex);
-			}
+			return await _chuyenRepository.GetById(chuyenId) ?? throw new KeyNotFoundException("Chuyen not found");
 		}
 
+		// Adds a new Chuyen to the repository
 		public async Task Add(Chuyen chuyen)
 		{
 			await _chuyenRepository.Add(chuyen);
 		}
 
-		public async Task Update(Chuyen chuyen)
+		// Deletes a Chuyen by its ID
+		public async Task Delete(int chuyenId)
 		{
-			await _chuyenRepository.Update(chuyen);
-		}
-
-		public async Task Delete(int maChuyen)
-		{
+			// Check if the Chuyen exists
 			try
 			{
-				_ = await _chuyenRepository.GetById(maChuyen) ?? throw new KeyNotFoundException("Chuyen not found");
-				await _chuyenRepository.Delete(maChuyen);
+				await _chuyenRepository.Delete(chuyenId);
 			}
 			catch (KeyNotFoundException)
 			{
@@ -58,6 +47,21 @@ namespace XuongMayNhom8.Services.Implemetations
 			catch (Exception ex)
 			{
 				throw new Exception("An error occurred while deleting the Chuyen", ex);
+			}
+		}
+
+		// Updates an existing Chuyen in the repository
+		public async Task Update(Chuyen chuyen)
+		{
+			try
+			{
+				await _chuyenRepository.Update(chuyen);
+			} catch (KeyNotFoundException)
+			{
+				throw;
+			} catch (Exception ex)
+			{
+				throw new Exception("An error occurred while updating the Chuyen", ex);
 			}
 		}
 	}

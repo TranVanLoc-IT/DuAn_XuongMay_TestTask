@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace XuongMayNhom8.Repositories.Models;
+﻿namespace XuongMayNhom8.Repositories.Models;
 
 public partial class Sanpham
 {
