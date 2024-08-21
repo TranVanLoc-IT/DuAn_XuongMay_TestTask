@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("XuongMayNhom8.Repositories")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c8617ee9edb4006c745d928507b8a9f63af30b3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a540fa83744d5850ad2fabb28795bdb58ac7c547")]
 [assembly: System.Reflection.AssemblyProductAttribute("XuongMayNhom8.Repositories")]
 [assembly: System.Reflection.AssemblyTitleAttribute("XuongMayNhom8.Repositories")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
