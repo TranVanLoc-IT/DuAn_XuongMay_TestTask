@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("XuongMayNhom8.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2deff0106c81fb165baf8c611a4895f676a383ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26eca25986ddf7dab4aec308c9857528135fd07e")]
 [assembly: System.Reflection.AssemblyProductAttribute("XuongMayNhom8.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("XuongMayNhom8.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
