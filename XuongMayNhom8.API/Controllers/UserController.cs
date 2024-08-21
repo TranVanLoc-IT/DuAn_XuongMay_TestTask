@@ -19,7 +19,7 @@ namespace XuongMayNhom8.API.Controllers
 
         // GET: api/user
         [HttpGet]
-          // Require Admin role to access this endpoint
+        [Authorize(Roles = "Admin")]  // Require Admin role to get info of all users
         public async Task<IActionResult> GetUsers()
         {
             var users = await _userService.GetUsersAsync();
@@ -28,7 +28,7 @@ namespace XuongMayNhom8.API.Controllers
 
         // GET: api/user/{id}
         [HttpGet("{id:guid}")]
-        [Authorize]  // Require any authenticated user to access this endpoint
+        [Authorize(Roles = "Admin")]  // Require Admin role to request data of an user
         public async Task<IActionResult> GetUserById(Guid id)
         {
             var user = await _userService.GetUserByIdAsync(id);
@@ -55,7 +55,7 @@ namespace XuongMayNhom8.API.Controllers
 
         // PUT: api/user/{id}
         [HttpPut("{id:guid}")]
-        [Authorize]  // Require any authenticated user to update a user
+        [Authorize(Roles = "Admin")]  // Require Admin role to update an user
         public async Task<IActionResult> UpdateUser(Guid id, [FromBody] User user)
         {
             if (!ModelState.IsValid)

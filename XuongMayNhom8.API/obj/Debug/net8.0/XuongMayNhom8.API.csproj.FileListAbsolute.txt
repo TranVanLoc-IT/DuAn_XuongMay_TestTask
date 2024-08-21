@@ -139,3 +139,4 @@ D:\workspace\vs\other\XuongMayNhom8\XuongMayNhom8\XuongMayNhom8.API\bin\Debug\ne
 D:\workspace\vs\other\XuongMayNhom8\XuongMayNhom8\XuongMayNhom8.API\bin\Debug\net8.0\XuongMayNhom8.Services.dll
 D:\workspace\vs\other\XuongMayNhom8\XuongMayNhom8\XuongMayNhom8.API\bin\Debug\net8.0\XuongMayNhom8.Services.pdb
 D:\workspace\vs\other\XuongMayNhom8\XuongMayNhom8\XuongMayNhom8.API\bin\Debug\net8.0\XuongMayNhom8.Repositories.pdb
+D:\workspace\vs\other\XuongMayNhom8\XuongMayNhom8\XuongMayNhom8.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

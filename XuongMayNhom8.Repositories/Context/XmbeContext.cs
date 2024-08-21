@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using XuongMayNhom8.Repositories.Models;
 
-namespace XuongMayNhom8.Repositories.Models;
+namespace XuongMayNhom8.Repositories.Context;
 
 public partial class XmbeContext : DbContext
 {
