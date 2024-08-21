@@ -1,7 +1,16 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using XuongMayNhom8.Repositories.Configuration;
+using XuongMayNhom8.Repositories.Context;
 using XuongMayNhom8.Repositories.Models;
+using XuongMayNhom8.Repositories.Repositories.AuthRepository;
 using XuongMayNhom8.Repositories.Repositories.UserRepository;
 using XuongMayNhom8.Services.Services.UserService;
+using XuongMayNhom8.Services.Services.OrderService;
+using XuongMayNhom8.Repositories.Repositories.OrderRepository;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,9 +25,40 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<XmbeContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-
+builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+
+<<<<<<< HEAD
+var jwtSettings = builder.Configuration.GetSection("Jwt").Get<JwtSetting>();
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+    };
+});
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminPolicy", policy => policy.RequireRole("Admin"));
+    options.AddPolicy("ManagerPolicy", policy => policy.RequireRole("Manager"));
+});
+=======
+//regis DI
+builder.Services.AddTransient<IOrderRepository<Donhang>, OrderRepository<Donhang>>();
+builder.Services.AddTransient<IOrderService<Donhang>, OrderService<Donhang>>();
+>>>>>>> chuyen_task_feature
 
 var app = builder.Build();
 
@@ -30,6 +70,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication(); // tempt adding
 
 app.UseAuthorization();
 

@@ -14,7 +14,15 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("XuongMayNhom8.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ad724601d2620e60638c42fb42455963ee10b80")]
+=======
+<<<<<<< HEAD
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b24feb5e728e0edd8e5a1b7d1103ad0a7de64d9a")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2deff0106c81fb165baf8c611a4895f676a383ce")]
+>>>>>>> chuyen_task_feature
+>>>>>>> 59273bcf278a83e5300d434a735a4333f8a5e9b2
 [assembly: System.Reflection.AssemblyProductAttribute("XuongMayNhom8.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("XuongMayNhom8.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

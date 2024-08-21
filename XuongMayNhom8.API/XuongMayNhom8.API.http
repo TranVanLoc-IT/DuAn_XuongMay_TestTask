@@ -1,6 +1,18 @@
 @XuongMayNhom8.API_HostAddress = http://localhost:5257
 
-GET {{XuongMayNhom8.API_HostAddress}}/weatherforecast/
+POST {{XuongMayNhom8.API_HostAddress}}/api/order/
 Accept: application/json
 
+{
+  "madon": 123,
+  "ngaydat": "2024-09-30",
+  "soluong": 12,
+  "masp": 2
+}
 ###
+// require running https before
+// other way use httprepl https://localhost:5257 to test
+// connect url -> ls: show get api list -> cd apiName -> get or ger [number] to get details
+// delete [id]
+// post -c "{"field": value,}"
+// put id -c "{"field": new_value}"

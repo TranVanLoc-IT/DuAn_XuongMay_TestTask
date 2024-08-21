@@ -11,7 +11,7 @@ namespace XuongMayNhom8.Services.Services.UserService
     {
         Task<User> CreateUserAsync(User user);
         Task<IEnumerable<User>> GetUsersAsync();
-        Task<User?> GetUserByIdAsync(Guid id);
+        Task<User?> GetUserByIdAsync(Guid id);  
         Task<User?> UpdateUserAsync(User user);
         Task<bool> DeleteUserAsync(Guid id);
     }
