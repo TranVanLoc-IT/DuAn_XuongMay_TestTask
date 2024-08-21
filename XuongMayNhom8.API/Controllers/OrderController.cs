@@ -10,8 +10,8 @@ namespace XuongMayNhom8.API.Controllers
     public class OrderController : ControllerBase
     {
         // DI services
-        private readonly IOrderService _orderService;
-        public OrderController(IOrderService orderService) { 
+        private readonly IOrderService<Donhang> _orderService;
+        public OrderController(IOrderService<Donhang> orderService) { 
             this._orderService = orderService;
         }
 
@@ -19,6 +19,7 @@ namespace XuongMayNhom8.API.Controllers
         [HttpGet("{orderId:int}")]
         public async Task<IActionResult> GetSpecificOrder(int orderId)
         {
+            // OK or NotFound
             Donhang? donHang = await _orderService.GetOrCheckOrderAsync(orderId);
             if (donHang == null)
             {
@@ -42,6 +43,7 @@ namespace XuongMayNhom8.API.Controllers
         [Authorize("Admin")]
         public async Task<IActionResult> CreateOrder([FromBody] Donhang donhang)
         {
+            // CreateAtAction or badrequest
             // check data fields is valid
             if(!ModelState.IsValid)
             {
@@ -60,6 +62,7 @@ namespace XuongMayNhom8.API.Controllers
         [Authorize(Roles = "Admin")]  
         public async Task<IActionResult> UpdateOrder([FromBody] Donhang donhang)
         {
+            // NoContent: success, NotFound: fail
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -70,13 +73,14 @@ namespace XuongMayNhom8.API.Controllers
             {
                 return NotFound("Order not found to update");
             }
-            return Ok(updatedUser);
+            return NoContent();// was updated in the in-memory cache
         }
 
         [HttpDelete("{orderId:int}")]
         [Authorize(Roles = "Admin")]  
         public async Task<IActionResult> DeleteOrder(int orderId)
         {
+            // NoContent or NotFound to response
             var result = await _orderService.DeleteOrderAsync(orderId);
             if (!result)
             {

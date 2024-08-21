@@ -24,8 +24,8 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 
 //regis DI
-builder.Services.AddTransient<IOrderRepository, OrderRepository>();
-builder.Services.AddTransient<IOrderService, OrderService>();
+builder.Services.AddTransient<IOrderRepository<Donhang>, OrderRepository<Donhang>>();
+builder.Services.AddTransient<IOrderService<Donhang>, OrderService<Donhang>>();
 
 var app = builder.Build();
 

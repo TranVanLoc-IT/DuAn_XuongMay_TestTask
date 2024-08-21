@@ -7,13 +7,14 @@ using XuongMayNhom8.Repositories.Models;
 
 namespace XuongMayNhom8.Repositories.Repositories.OrderRepository
 {
-    public interface IOrderRepository
+    public interface IOrderRepository<T> where T: Donhang
     {
-        Task<Donhang> CreateOrderAsync(Donhang donHang);
-        Task<IEnumerable<Donhang>> GetOrdersAsync();
-        Task<Donhang?> GetOrCheckOrderAsync(int orderId);
-        Task<Donhang?> UpdateOrderAsync(Donhang donHang);
+        Task<T> CreateOrderAsync(T order);
+        Task<IEnumerable<T>> GetOrdersAsync();
+        Task<T?> GetOrCheckOrderAsync(int orderId);
+        Task<T?> UpdateOrderAsync(T order);
         Task<bool> DeleteOrderAsync(int orderId);
+        Task<IReadOnlyCollection<T>> PaginatePage(IQueryable<T> query, int index, int pageSize);
 
     }
 }

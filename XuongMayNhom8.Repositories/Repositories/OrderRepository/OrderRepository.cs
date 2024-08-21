@@ -7,74 +7,87 @@ using XuongMayNhom8.Repositories.Models;
 
 namespace XuongMayNhom8.Repositories.Repositories.OrderRepository
 {
-    public class OrderRepository : IOrderRepository
+    public class OrderRepository<T> : IOrderRepository<T> where T: Donhang
     {
         // DI dbcontext
         private readonly XmbeContext _dbContext;
-
+        private readonly DbSet<T> _dbSet;
         public OrderRepository(XmbeContext dbContext)
         {
             this._dbContext = dbContext;
+            _dbSet = this._dbContext.Set<T>(); // get table
         }
-        public async Task<Donhang> CreateOrderAsync(Donhang donHang)
+        public async Task<T> CreateOrderAsync(T order)
         {
-            Donhang isExistedOrder = this._dbContext.Donhangs.Find(donHang.Madon);
+            T isExistedOrder = await this._dbSet.FindAsync(order);
             if(isExistedOrder != null)
             {
                 return null;
             }
-            await this._dbContext.Donhangs.AddAsync(donHang);
+            if (CheckProductQuantityInvalidAsync(order))
+            {
+                return null;
+            }
+            this._dbSet.Add(order);
             await this._dbContext.SaveChangesAsync();
-            return donHang;
+            return order;
         }
 
         public async Task<bool> DeleteOrderAsync(int orderId)
         {
-            Donhang isExistedOrder = this._dbContext.Donhangs.Find(orderId);
+            T isExistedOrder = await this._dbSet.FindAsync(orderId);
             if (isExistedOrder != null)
             {
-                this._dbContext.Donhangs.Remove(isExistedOrder);
+                this._dbSet.Remove(isExistedOrder);
                 await this._dbContext.SaveChangesAsync();
                 return true;
             }
             return false;
         }
 
-        public async Task<Donhang?> GetOrCheckOrderAsync(int orderId)
+        public async Task<T?> GetOrCheckOrderAsync(int orderId)
         {
-            return await this._dbContext.Donhangs.FindAsync(orderId);
+            return await this._dbSet.FindAsync(orderId);
         }   
 
-        public async Task<IEnumerable<Donhang>> GetOrdersAsync()
+        public async Task<IEnumerable<T>> GetOrdersAsync()
         {
-            return await this._dbContext.Donhangs.ToListAsync();
+            return await this._dbSet.ToListAsync();
         }
 
-        public async Task<Donhang?> UpdateOrderAsync(Donhang donHang)
+        public async Task<T?> UpdateOrderAsync(T order)
         {
             // raise error "The instance cannot be tracked", theo dõi nhiều entity cùng lúc trong một dbcontext khi lấy ra/thay đổi
-            // first entity can be tracked, id = 100 same id with donhang.madon=100 => similar and track at same dbcontext
-            // can use this._dbContext.Donhangs.asnotracking() to resolve or refer below
+            // first entity can be tracked, id = 100 same id with T.madon=100 => similar and track at same dbcontext
+            // can use this._dbSet.asnotracking() to resolve or refer below
             // chỉ đọc bỏ cx dc nhưng update change thì ko nên
-            Donhang isExistedOrder = await this._dbContext.Donhangs.FindAsync(donHang.Madon);
+            T isExistedOrder = await this._dbSet.FindAsync(order.Madon);
             if (isExistedOrder != null)
             {
+                if (CheckProductQuantityInvalidAsync(order))
+                {
+                    return null;
+                }
                 // resolve this error by detached one and modified object need to be update
-                this._dbContext.Entry(isExistedOrder).State = EntityState.Detached;
-                this._dbContext.Entry(donHang).State = EntityState.Modified;
+                this._dbSet.Entry(isExistedOrder).State = EntityState.Detached;
+                this._dbSet.Entry(order).State = EntityState.Modified;
                 await this._dbContext.SaveChangesAsync();
-                return donHang;
+                return order;
             }
             return null;
         }
-        public async Task<bool> CheckProductQuantityInvalidAsync(int? masp, int? quantity)
+        private bool CheckProductQuantityInvalidAsync(T order)
         {
-            int existingQuantity = this._dbContext.Sanphams.Where(sp=>sp.Masp == masp).Select(sp=>sp.SoLuongCon).FirstOrDefault()??0;
-            if (quantity > existingQuantity)
+            int existingQuantity = this._dbContext.Sanphams.Where(sp=>sp.Masp == order.Masp).Select(sp=>sp.SoLuongCon).FirstOrDefault()??0;
+            if (order.Soluong > existingQuantity)
             {
                 return false;
             }
             return true;
+        }
+        public Task<IReadOnlyCollection<T>> PaginatePage(IQueryable<T> query, int page, int pageSize)
+        {
+            return null;
         }
     }
 }

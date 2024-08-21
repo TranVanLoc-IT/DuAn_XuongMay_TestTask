@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("XuongMayNhom8.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2deff0106c81fb165baf8c611a4895f676a383ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf4f2b9212dca58ec8554b8915d574bc72b29842")]
 [assembly: System.Reflection.AssemblyProductAttribute("XuongMayNhom8.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("XuongMayNhom8.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
