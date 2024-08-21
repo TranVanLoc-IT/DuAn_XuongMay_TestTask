@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\workspace\\vs\\other\\XuongMayNhom8\\XuongMayNhom8\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj": {}
+    "L:\\source\\repos\\XMBE\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj": {}
   },
   "projects": {
-    "D:\\workspace\\vs\\other\\XuongMayNhom8\\XuongMayNhom8\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj": {
+    "L:\\source\\repos\\XMBE\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\vs\\other\\XuongMayNhom8\\XuongMayNhom8\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj",
+        "projectUniqueName": "L:\\source\\repos\\XMBE\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj",
         "projectName": "XuongMayNhom8.Repositories",
-        "projectPath": "D:\\workspace\\vs\\other\\XuongMayNhom8\\XuongMayNhom8\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\vs\\other\\XuongMayNhom8\\XuongMayNhom8\\XuongMayNhom8.Repositories\\obj\\",
+        "projectPath": "L:\\source\\repos\\XMBE\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "L:\\source\\repos\\XMBE\\XuongMayNhom8.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
