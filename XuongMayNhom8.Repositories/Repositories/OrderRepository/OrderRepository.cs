@@ -50,11 +50,11 @@ namespace XuongMayNhom8.Repositories.Repositories.OrderRepository
             return await this._dbSet.FindAsync(orderId);
         }   
 
-        public async Task<IEnumerable<T>> GetOrdersAsync()
+        public async Task<IReadOnlyCollection<Donhang>> GetOrdersAsync(int pageNumber, int pageSize)
         {
-            return await this._dbSet.ToListAsync();
+            var orders = await _dbSet.AsNoTracking().Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
+            return orders;
         }
-
         public async Task<T?> UpdateOrderAsync(T order)
         {
             // raise error "The instance cannot be tracked", theo dõi nhiều entity cùng lúc trong một dbcontext khi lấy ra/thay đổi

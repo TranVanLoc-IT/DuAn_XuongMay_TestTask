@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using XuongMayNhom8.Repositories.Models;
 using XuongMayNhom8.Services.Services.OrderService;
+using XuongMayNhom8.Services.Pagination;
 namespace XuongMayNhom8.API.Controllers
 {
     [Route("api/[controller]")]
@@ -29,9 +29,9 @@ namespace XuongMayNhom8.API.Controllers
         }
         // get all
         [HttpGet]
-        public async Task<IActionResult> GetAllOrder()
+        public async Task<IActionResult> GetAllOrder(int pageNumber = 1, int pageSize = 10)
         {
-            IEnumerable<Donhang> dsDonHang = await _orderService.GetOrdersAsync();
+            PagedResult<Donhang> dsDonHang = await _orderService.GetOrdersAsync(pageNumber, pageSize);
             if (dsDonHang == null)
             {
                 return NotFound("Khong thay du lieu");

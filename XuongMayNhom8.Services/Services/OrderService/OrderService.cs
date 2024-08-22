@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
 using XuongMayNhom8.Repositories.Models;
 using XuongMayNhom8.Repositories.Repositories.OrderRepository;
-
+using XuongMayNhom8.Services.Pagination;
 namespace XuongMayNhom8.Services.Services.OrderService
 {
     public class OrderService<T> : IOrderService<T> where T: Donhang
@@ -28,9 +24,11 @@ namespace XuongMayNhom8.Services.Services.OrderService
         {
             return await this._orderRepo.GetOrCheckOrderAsync(orderId);
         }
-        public async Task<IEnumerable<T>> GetOrdersAsync()
+        public async Task<PagedResult<Donhang>> GetOrdersAsync(int pageNumber, int pageSize)
         {
-            return await this._orderRepo.GetOrdersAsync();
+            var orders = await this._orderRepo.GetOrdersAsync(pageNumber, pageSize);
+            int totalRecords = orders.Count();
+            return new PagedResult<Donhang>(orders, totalRecords, pageNumber, pageSize);
         }
 
         public async Task<T?> UpdateOrderAsync(T order)
