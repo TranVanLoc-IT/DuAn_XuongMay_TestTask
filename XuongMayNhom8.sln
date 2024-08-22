@@ -8,6 +8,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Services", "2.Services", "{6E365DEF-0098-4A7D-9CAC-CC7D8440FF80}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Server", "1.Server", "{72A4863B-5FF8-4751-B43C-97B7BD554E81}"
+	ProjectSection(SolutionItems) = preProject
+		XuongMayNhom8.API\DanhMucDTO.cs = XuongMayNhom8.API\DanhMucDTO.cs
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XuongMayNhom8.API", "XuongMayNhom8.API\XuongMayNhom8.API.csproj", "{79290118-9033-4DF0-B577-9B30A38A05F6}"
 EndProject

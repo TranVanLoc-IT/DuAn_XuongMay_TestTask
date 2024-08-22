@@ -1,9 +1,8 @@
 ﻿using XuongMayNhom8.Repositories.Models;
-using XuongMayNhom8.Services.Pagination;
 
 namespace XuongMayNhom8.Services.Services.OrderService
 {
-    public interface IOrderService<T> where T : Donhang
+    public interface IProductionLineService<T> where T : Donhang
     {
         Task<T?> GetOrCheckOrderAsync(int maDonHang);
         Task<PagedResult<Donhang>> GetOrdersAsync(int pageNumber, int pageSize);

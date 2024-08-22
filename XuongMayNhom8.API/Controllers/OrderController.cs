@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using XuongMayNhom8.Repositories.Models;
 using XuongMayNhom8.Services.Services.OrderService;
-using XuongMayNhom8.Services.Pagination;
 namespace XuongMayNhom8.API.Controllers
 {
     [Route("api/[controller]")]
@@ -10,8 +9,8 @@ namespace XuongMayNhom8.API.Controllers
     public class OrderController : ControllerBase
     {
         // DI services
-        private readonly IOrderService<Donhang> _orderService;
-        public OrderController(IOrderService<Donhang> orderService) { 
+        private readonly IProductionLineService<Donhang> _orderService;
+        public OrderController(IProductionLineService<Donhang> orderService) { 
             this._orderService = orderService;
         }
 

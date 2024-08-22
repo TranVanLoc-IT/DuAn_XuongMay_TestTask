@@ -1,13 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using XuongMayNhom8.Repositories.Models;
 using XuongMayNhom8.Repositories.Repositories.OrderRepository;
-using XuongMayNhom8.Services.Pagination;
 namespace XuongMayNhom8.Services.Services.OrderService
 {
-    public class OrderService<T> : IOrderService<T> where T: Donhang
+    public class ProductionLineService<T> : IProductionLineService<T> where T: Donhang
     {
         private readonly IOrderRepository<T> _orderRepo;
-        public OrderService(IOrderRepository<T> orderRepository) {
+        public ProductionLineService(IOrderRepository<T> orderRepository) {
             this._orderRepo = orderRepository;
         }
         public async Task<T?> CreateOrderAsync(T order)

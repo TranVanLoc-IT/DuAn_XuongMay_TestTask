@@ -10,6 +10,7 @@ using XuongMayNhom8.Repositories.Repositories.UserRepository;
 using XuongMayNhom8.Services.Services.UserService;
 using XuongMayNhom8.Services.Services.OrderService;
 using XuongMayNhom8.Repositories.Repositories.OrderRepository;
+using XuongMayNhom8.Repositories.Repositories.TaskRepository;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,7 +26,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<XmbeContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 
@@ -55,7 +56,7 @@ builder.Services.AddAuthorization(options =>
 });
 //regis DI
 builder.Services.AddTransient<IOrderRepository<Donhang>, OrderRepository<Donhang>>();
-builder.Services.AddTransient<IOrderService<Donhang>, OrderService<Donhang>>();
+builder.Services.AddTransient<IProductionLineService<Donhang>, ProductionLineService<Donhang>>();
 
 var app = builder.Build();
 
