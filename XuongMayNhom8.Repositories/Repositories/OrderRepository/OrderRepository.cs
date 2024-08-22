@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using XuongMayNhom8.Repositories.Models;
+using XuongMayNhom8.Repositories.Context;
 
 namespace XuongMayNhom8.Repositories.Repositories.OrderRepository
 {

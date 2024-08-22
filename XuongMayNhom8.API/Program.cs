@@ -29,7 +29,6 @@ builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 
-<<<<<<< HEAD
 var jwtSettings = builder.Configuration.GetSection("Jwt").Get<JwtSetting>();
 builder.Services.AddAuthentication(options =>
 {
@@ -54,11 +53,9 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("AdminPolicy", policy => policy.RequireRole("Admin"));
     options.AddPolicy("ManagerPolicy", policy => policy.RequireRole("Manager"));
 });
-=======
 //regis DI
 builder.Services.AddTransient<IOrderRepository<Donhang>, OrderRepository<Donhang>>();
 builder.Services.AddTransient<IOrderService<Donhang>, OrderService<Donhang>>();
->>>>>>> chuyen_task_feature
 
 var app = builder.Build();
 

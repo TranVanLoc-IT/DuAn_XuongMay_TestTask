@@ -400,3 +400,4 @@ L:\source\repos\XMBE\XuongMayNhom8.API\bin\Debug\net8.0\runtimes\win\lib\net7.0\
 L:\source\repos\XMBE\XuongMayNhom8.API\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 L:\source\repos\XMBE\XuongMayNhom8.API\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 >>>>>>> chuyen_task_feature
+L:\source\repos\XMBE\XuongMayNhom8.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
