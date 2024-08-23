@@ -49,7 +49,7 @@ namespace XuongMayNhom8.API.Controllers
         [HttpPost]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        [Authorize("Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> CreateOrder([FromBody] Donhang donhang)
         {
             // CreateAtAction or badrequest
