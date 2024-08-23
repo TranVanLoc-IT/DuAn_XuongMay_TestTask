@@ -9,7 +9,6 @@ namespace XuongMayNhom8.Services.Services.OrderService
         Task<T> CreateOrderAsync(T donhang);
         Task<T> UpdateOrderAsync(T donhang);
         Task<bool> DeleteOrderAsync(int maDonHang);
-        Task<IReadOnlyCollection<T>> PaginatePage(IQueryable<T> query, int index, int pageSize);
 
     }
 }

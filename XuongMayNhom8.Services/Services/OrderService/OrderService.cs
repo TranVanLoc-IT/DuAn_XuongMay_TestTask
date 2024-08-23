@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using XuongMayNhom8.Repositories.Models;
+﻿using XuongMayNhom8.Repositories.Models;
 using XuongMayNhom8.Repositories.Repositories.OrderRepository;
 namespace XuongMayNhom8.Services.Services.OrderService
 {
@@ -33,9 +32,6 @@ namespace XuongMayNhom8.Services.Services.OrderService
         public async Task<T?> UpdateOrderAsync(T order)
         {
             return await this._orderRepo.UpdateOrderAsync(order);
-        }
-        public Task<IReadOnlyCollection<T>> PaginatePage(IQueryable<T> query, int page, int pageSize) { 
-            return null;
         }
     }
 }

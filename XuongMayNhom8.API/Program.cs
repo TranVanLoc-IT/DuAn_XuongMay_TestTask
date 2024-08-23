@@ -11,6 +11,13 @@ using XuongMayNhom8.Services.Services.UserService;
 using XuongMayNhom8.Services.Services.OrderService;
 using XuongMayNhom8.Repositories.Repositories.OrderRepository;
 using XuongMayNhom8.Repositories.Repositories.TaskRepository;
+using XuongMayNhom8.Services.Services.TaskService;
+using XuongMayNhom8.Services.Services.ProductionLineService;
+using XuongMayNhom8.Repositories.Repositories.ProductionLineRepository;
+using XuongMayNhom8.Repositories.Repositories.CategoryRepository;
+using XuongMayNhom8.Repositories.Repositories.ProductRepository;
+using XuongMayNhom8.Services.Services.CategoryService;
+using XuongMayNhom8.Services.Services.ProductService;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -57,6 +64,29 @@ builder.Services.AddAuthorization(options =>
 //regis DI
 builder.Services.AddTransient<IOrderRepository<Donhang>, OrderRepository<Donhang>>();
 builder.Services.AddTransient<IProductionLineService<Donhang>, ProductionLineService<Donhang>>();
+
+
+builder.Services.AddTransient<IAuthRepository, AuthRepository>();
+builder.Services.AddTransient<IUserRepository, UserRepository>();
+
+
+builder.Services.AddScoped<IProductionLineRepository, ProductionLineRepository>();
+builder.Services.AddScoped<IProductionLineService, ProductionLineService>();
+builder.Services.AddScoped<ITaskRepository, TaskRepository>();
+builder.Services.AddScoped<ITaskService, TaskService>();
+
+#region Repositories
+builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ICategoryRepository<Danhmuc>, CategoryRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+#endregion
+
+#region Services
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+#endregion
 
 var app = builder.Build();
 
