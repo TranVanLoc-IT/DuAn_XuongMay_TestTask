@@ -31,6 +31,10 @@ namespace XuongMayNhom8.API.Controllers
         public async Task<IActionResult> GetAllOrder(int pageNumber = 1, int pageSize = 10)
         {
             PagedResult<Donhang> dsDonHang = await _orderService.GetOrdersAsync(pageNumber, pageSize);
+            if(dsDonHang.HasPreviousPage || dsDonHang.HasNextPage)
+            {
+                return NotFound($"Trang khong hop le: 1 -> {dsDonHang.TotalPages}");
+            }
             if (dsDonHang == null)
             {
                 return NotFound("Khong thay du lieu");
