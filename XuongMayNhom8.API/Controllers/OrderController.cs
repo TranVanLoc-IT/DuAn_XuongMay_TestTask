@@ -16,6 +16,8 @@ namespace XuongMayNhom8.API.Controllers
 
         // get one
         [HttpGet("{orderId:int}")]
+        [ProducesResponseType(typeof(Donhang), 200)]
+        [ProducesResponseType(typeof(Donhang), 404)]
         public async Task<IActionResult> GetSpecificOrder(int orderId)
         {
             // OK or NotFound
@@ -28,6 +30,8 @@ namespace XuongMayNhom8.API.Controllers
         }
         // get all
         [HttpGet]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(404)]
         public async Task<IActionResult> GetAllOrder(int pageNumber = 1, int pageSize = 10)
         {
             PagedResult<Donhang> dsDonHang = await _orderService.GetOrdersAsync(pageNumber, pageSize);
@@ -43,6 +47,8 @@ namespace XuongMayNhom8.API.Controllers
         }
         // create one
         [HttpPost]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         [Authorize("Admin")]
         public async Task<IActionResult> CreateOrder([FromBody] Donhang donhang)
         {
@@ -62,6 +68,9 @@ namespace XuongMayNhom8.API.Controllers
         }
 
         [HttpPut]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
         [Authorize(Roles = "Admin")]  
         public async Task<IActionResult> UpdateOrder([FromBody] Donhang donhang)
         {
@@ -80,6 +89,8 @@ namespace XuongMayNhom8.API.Controllers
         }
 
         [HttpDelete("{orderId:int}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(404)]
         [Authorize(Roles = "Admin")]  
         public async Task<IActionResult> DeleteOrder(int orderId)
         {
